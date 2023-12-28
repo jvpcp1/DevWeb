@@ -1,12 +1,14 @@
-// import React from 'react'
+import React from 'react'
 
-// const cartao = (props) => {
-//   return (
-// <div className="card">
-//     <div className="card-hearder">{props.cabecalho}</div>
-//     <div className="card body"></div>
-//         {props.children}
-// </div>  
-// )}
+const Cartao = (props) => {
+  return (
+    <div className="card">
+        <div className='card-header text-center'>{props.titulo}</div>
+            <div className='card-body'>
+                {props.children}
+            </div>
+    </div>
+    
+)}
 
-// export default cartao
+export default Cartao
