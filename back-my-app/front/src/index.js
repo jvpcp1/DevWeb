@@ -4,8 +4,25 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import Cartao from './Cartao'
 import Perg from './Perg'
+import feedback from './feedback'
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+
 
 const App = () => {
+
+//   const guargaDado = () => alert('Agradecemos o feedback')
+//   const funcaoNOK = () => alert('Verificaremos o ocorrido')
+//   const textoOK = 'Já chegou'
+//   const textoNOK = 'Não chegou ainda'
+
+//   const componenteFeedback = (
+//     <feedback 
+//       funcaoOK={funcaoOK}
+//       funcaoNOK={funcaoNOK}
+//       textoOK={textoOK}
+//       textoNOK={textoNOK}
+//     />
+//   )
   return (
     <div>
       <div className="container border rounded mt-2">
@@ -71,15 +88,10 @@ const App = () => {
           <div className='col-lg-4 col-md-6 col-sm-12'>
               <Cartao
                 titulo="Postura do Banco Central">
-                <div className='card-body d-flex aling-items-center'>
-                  <div className="btn-group aling-items-center ms-2" role="group" aria-label="Opções">
-                    <button type="button" class="btn btn-primary">Dovish</button>
-                    <button type="button" class="btn btn-secondary">Neutro</button>
-                    <button type="button" class="btn btn-success">Hawkish</button>
-                  </div>
-                </div>      
+               <SelectButton value={value} onChange={(e) => setValue(e.value)} optionLabel="name" options={items} multiple />
+
               </Cartao>
-            </div>  
+           </div>  
             
         </div>
       </div>
