@@ -1,0 +1,13 @@
+Regra de Taylor
+
+A função apresenta qual seria a reação do banco central dada uma determinada taxa de inflação e de crescimento oferecida pelo usuário
+
+O chatGPT redige uma ata com a decisão do Banco central respaldada pelo resultado da função
+
+incluir um botao gerar resposta e oferecer um campo com a resposta
+
+opçao de enviar a resposta por email
+
+fazer o icone parar de brilhar e deixar o botão verde após resposta
+
+habilitar botao gerar ata do banco central após o término
