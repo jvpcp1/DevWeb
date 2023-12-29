@@ -1,5 +1,5 @@
 import React from 'react'
-import guarda from './guarda'
+import Guarda from './Guarda'
 
 const Perg = (props) => {
   return (
@@ -10,11 +10,12 @@ const Perg = (props) => {
             </div> 
       
             <div class="input-group mb-3">
-                <input type="number ms-3" class="form-control ms-2 p-2" placeholder={props.preenchimento}/>
+                <input type="number ms-3" className="form-control ms-2 p-2" placeholder={props.preenchimento}/>
                     <button 
-                        class="btn btn-outline-secondary d-flex" 
+                        className="btn btn-outline-secondary d-flex" 
+
                         type="button" id="button-addon2"
-                        onClick={guarda}>
+                        onClick={Guarda}>
                             Enviar Valor
                     </button>
                 </div>          

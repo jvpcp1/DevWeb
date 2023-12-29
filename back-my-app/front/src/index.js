@@ -1,12 +1,38 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import Cartao from './Cartao'
 import Perg from './Perg'
-import guarda from './guarda'
 
 const App = () => {
+
+  const [inputValues, setInputValues] = useState({
+    'IPCA 12m': '',
+    'PIB 12m': '',
+    'IPCA Meta': '',
+    'PIB Neutro': '',
+    'Taxa Real': '',
+  })
+
+  const [selectedPosture, setSelectedPosture] = useState('')
+
+  const handleInputChange = (preenchimento, value) => {
+    setInputValues((prevInputValues) => ({
+      ...prevInputValues,
+      [preenchimento]: value
+    }))
+  }
+
+  const handlePostureClick = (posture) => {
+    setSelectedPosture(posture)
+  }
+
+  const handleSaveData = () => {
+    console.log('Dados salvos:', inputValues)
+    console.log('Postura selecionada:', selectedPosture)
+  }
 
   return (
     <div>
