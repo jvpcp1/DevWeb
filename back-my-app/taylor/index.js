@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useEffect } from 'react';
-import guarda from './guarda';
+import guarda from '.back-my-app/front/guarda';
 
 export default function Taylor() {
   const [valores, setValores] = useState([]); // Array de valores
@@ -11,7 +11,7 @@ export default function Taylor() {
 
     // Adicionando os valores ao array de valores
     setValores(valoresGuardados);
-  }, []);
+  }, [])};
 
   const calcularTaxaDeJuros = () => {
     // Obtendo o valor da taxa de juros real de equilíbrio
@@ -31,4 +31,9 @@ export default function Taylor() {
 
     // Calculando a taxa de juros nominal de curto prazo
     return e + t + 0.5 * (t - tPrime) + 0.5 * (y - yPrime);
-  };
+  }
+
+  app.post('/teste', (req, res) => {
+    const taylorValue = process.env.TAYLOR_VARIABLE || 'valor_padrão_caso_nao_exista';
+
+});
