@@ -4,25 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import Cartao from './Cartao'
 import Perg from './Perg'
-import feedback from './feedback'
-import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-
+import guarda from './guarda'
 
 const App = () => {
 
-//   const guargaDado = () => alert('Agradecemos o feedback')
-//   const funcaoNOK = () => alert('Verificaremos o ocorrido')
-//   const textoOK = 'Já chegou'
-//   const textoNOK = 'Não chegou ainda'
-
-//   const componenteFeedback = (
-//     <feedback 
-//       funcaoOK={funcaoOK}
-//       funcaoNOK={funcaoNOK}
-//       textoOK={textoOK}
-//       textoNOK={textoNOK}
-//     />
-//   )
   return (
     <div>
       <div className="container border rounded mt-2">
@@ -45,7 +30,7 @@ const App = () => {
               titulo="Inflação Corrente">
               <Perg
                 icone="fa-solid fa-money-bill-trend-up fa-2x fa-fade"
-                preenchimento="IPCA 12m"
+                preenchimento="IPCA 12m"              
               />
             </Cartao>
           </div>
@@ -88,8 +73,11 @@ const App = () => {
           <div className='col-lg-4 col-md-6 col-sm-12'>
               <Cartao
                 titulo="Postura do Banco Central">
-               <SelectButton value={value} onChange={(e) => setValue(e.value)} optionLabel="name" options={items} multiple />
-
+                    <div className="btn-group justify-content-center" role="group" aria-label="Opções">
+                    <button type="button" class="btn btn-primary">Dovish</button>
+                    <button type="button" class="btn btn-secondary">Neutro</button>
+                    <button type="button" class="btn btn-success">Hawkish</button>
+                  </div>
               </Cartao>
            </div>  
             
